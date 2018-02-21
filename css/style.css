@@ -1,0 +1,89 @@
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url("https://unpkg.com/vue-material@beta/dist/theme/default.css");
+@import url("https://unpkg.com/vue-material@beta/dist/vue-material.min.css");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic|Material+Icons");
+@import '../lib/animate.css';
+@import '_email.css';
+@import '_notes.css';
+@import '_places.css';
+@import '_home.css';
+
+
+
+*{
+    padding:0;
+    margin:0;
+    outline:0;
+}
+
+.sort-nav {
+    transform: scale(0.7)
+}
+
+.md-list-item-content>.md-icon:first-child{
+    margin-right: 0;
+}
+
+
+.md-dialog-container{
+    min-width: 60vw;
+    min-height: 80vh;
+}
+
+.md-field.md-has-textarea:not(.md-autogrow) .md-textarea{
+    min-height: 150px;
+}
+
+.email-modal-attach{
+    margin: 0 70px auto auto;
+}
+
+.badge {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 7px;
+    right: 20%;
+    background: red;
+    border-radius: 100%;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.466);
+    color: #fff;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: -.05em;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.email-preview-title{
+    font-size: 18px
+    !important
+}
+
+.side-nav{
+    background-color: #fafafa
+    !important
+}
+
+.nav-search-list{
+    margin-right: 5px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.288);
+    /* height: 80vh; */
+    max-height: 90vh;
+}
+
+.md-layout-item > .md-list.md-triple-line.md-theme-default{
+    overflow-y: scroll;
+    max-height: 70vh
+}
+
+.email-delete-button-container{
+    margin-top: 100px;
+}
+
+.nav-search-list{
+    min-width: 100%;
+}

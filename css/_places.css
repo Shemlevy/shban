@@ -1,0 +1,243 @@
+.google-map {
+    width: 100vw;
+    height: 85vh;
+    /* height: 48vh; */
+    margin: 0 auto;
+    background: gray;
+    z-index: 1;
+  }
+
+.input-search {
+  z-index: 5;
+  display: flex;
+  top: 0;
+}
+
+#pac-input{
+  padding:10px;
+  border-radius: 8px;
+  border:none;
+  margin:5px;
+  font-weight: 500;
+}
+
+.side-bar {
+  position: absolute;
+  bottom: 0;
+  z-index: 4;
+  background-color: rgba(255, 255, 255, 0.856);
+  width: 40%;
+  /* width: 100%; */
+  /* opacity: .9; */
+  height: 84.8vh;
+  /* height: 250px; */
+  padding-left:3px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.24);
+  animation-name: slidein,fadeIn;
+  animation-duration: 1s;
+  /* transition: all 2s ease-in-out; */
+}
+.side-bar::after {
+  animation-name: slidein,fadeIn;
+  animation-duration: 2s;
+  animation-direction: reverse;
+  
+}
+.side-bar > h1 {
+  text-transform: capitalize;
+  font-size:1.2em;
+  margin: 5px 0 5px 0;
+  text-align: center;
+}
+.side-bar > p {
+  font-size:1em;
+  color: gray;
+  font-weight: 500;
+  text-align: center;
+  padding-right:3px;
+}
+.label-ico {
+  display: none;
+}
+.label-ico:checked + .ico-places{
+  animation:infinitColor 5s;
+  -webkit-animation:infinitColor 2s infinite;
+}
+
+.icon-places{
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  justify-content: space-around;
+  font-family: Roboto,Noto Sans,-apple-system,BlinkMacSystemFont,sans-serif;
+}
+
+.ico-places {
+  cursor: pointer;
+  font-size:1.6em;
+  transition: all .6s ease-in-out;
+  margin-bottom: 6px;
+  margin-top: 6px;
+}
+.ico-places:first-child {
+  color:brown
+}
+.side-bar > div > label:nth-child(1) > i {
+  color:rgb(44, 197, 103)
+}
+
+.side-bar > div > label:nth-child(2) > i {
+  color:tomato
+}
+.side-bar > div > label:nth-child(3) > i {
+  color:teal
+}
+.side-bar > div > label:nth-child(4) > i {
+  color:palevioletred
+}
+.ico-places:hover {
+  color: gold;
+  transform: rotate(360deg)
+}
+
+.input-place {
+  width:100%;
+  font-size: 1.1em;
+  font-weight: 500;
+  color: gray;
+  border:none;
+  background: rgba(245, 245, 245, 0.671); 
+  margin-bottom: 6px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.24);
+  
+}
+.side-bar > textarea {
+  height: 80px;
+  resize: none;
+}
+
+.picked-info {
+  display: flex;
+  font-size: 1.1em;
+  font-weight: 500;
+  color: gray;
+  align-items: center;
+}
+.picked-info p {
+  margin-left:10px;
+}
+.picked-info i {
+  animation:infinitColor 3s;
+  -webkit-animation:infinitColor 3s infinite;
+}
+
+.add-photo {
+  font-size: 3em;
+  color:rgba(128, 128, 128, 0.726);
+  transition: all .5s ease-in-out;
+  
+}
+.add-photo:hover {
+ transform: scale(1.1);
+  cursor: pointer;
+}
+
+.btn-save{
+  background-color: rgb(70, 8, 70);
+  border:none;
+  color:white;
+  font-weight: 500;
+  font-size:1em;
+  border-radius: 0;
+  padding:2px;
+  margin-top:20px;
+}
+.btn-save:hover{
+  background-color: rgba(70, 8, 70, 0.651);
+  
+}
+
+.save-btns {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+#btn-save-input{
+  display: none;
+}
+
+
+@-webkit-keyframes infinitColor {
+  0% {color:rgb(100, 20, 20);}
+  50% {color:rgba(255, 238, 0, 0.596);}
+  100% {color:rgba(100, 20, 20, 0.966);}
+}
+@-webkit-keyframes fadeIn {
+  0% {opacity:0,};
+  100% {opacity:.7;}
+}
+
+@keyframes slidein {
+  from {
+    left: -40%; 
+  }
+  to {
+    left: 0%;
+  }
+}
+
+.place-modal {
+  position: absolute;
+  z-index: 6;
+  background-color: rgba(255, 255, 255, 0.856);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.356);
+  font-size: 1em;
+  font-weight: 500;
+  max-width: 400px;
+}
+
+
+
+
+.place-modal h1 {
+  font-size: 2em;
+  margin-bottom:10px;
+}
+
+.info {
+  margin: 30px;
+}
+
+.category {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.place-modal img{
+  width: 100%;
+  max-height: 250px;
+  box-shadow: 1px 1px 2px black;
+}
+
+.btns-crud {
+  display: flex;
+  width: 100%;
+  font-size: 1.5em;
+  align-items: center;
+}
+.btn-crud {
+  cursor: pointer;
+  background-color: rgb(221, 221, 221);
+  font-size: 1em;
+  color:rgb(134, 121, 121);
+  width:100%;
+  border-radius: 0;
+  border: 1px solid rgba(128, 120, 120, 0.623);
+  border-top:0;
+  transition: all .3s ease-in-out;
+}
+.btn-crud:hover {
+  background-color: rgb(165, 162, 162);
+  color:white;
+}
+

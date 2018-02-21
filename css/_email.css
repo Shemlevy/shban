@@ -1,0 +1,42 @@
+.email-display-container{
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+
+@media only screen and (min-width: 768px) {
+    .email-display-container{
+        display: flex;
+        flex-flow: row nowrap;
+    }
+
+    .email-sort-list-container{
+        padding-right: 13px;
+        box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.37);
+    }
+}
+
+
+.email-sort-container{
+    display: flex;
+    flex-flow: row nowrap;
+
+}
+
+
+
+.email-side-nav{
+    display: flex;
+    flex-flow: column;
+}
+
+.email-sort-input-container{
+    display: flex;
+    flex-flow: column wrap;
+    padding-left: 20px;
+}
+
+.email-view-continer{
+    padding: 30px;
+}
+
